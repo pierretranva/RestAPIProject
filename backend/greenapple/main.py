@@ -2,11 +2,14 @@
 from typing import Any
 
 from fastapi import FastAPI
+from starlette.middleware.cors import CORSMiddleware
 
 app = FastAPI(
     title="greenapple",
     root_path="",
 )
+Origin = ["http://localhost:3000"]
+app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_headers=["*"])
 
 
 @app.get("/")
