@@ -6,6 +6,7 @@ import React, { useEffect, useState } from "react";
 import type { FC } from 'react';
 import { Button, Dialog, Typography, DialogTitle, DialogContent } from '@material-ui/core';
 import { Counter } from "./Counter"
+import { ShoppingCart } from "./ShoppingCart"
 
 const App: FC = () => {
   const [data, setData] = useState<string>()
@@ -14,36 +15,36 @@ const App: FC = () => {
   const fetchData = async () => {
     const response = await fetch("http://localhost:8000/hello")
     const jsonRes = await response.json()
-    console.log(jsonRes)
     setData(jsonRes)
-    console.log("it is working rght here")
-    console.log(jsonRes)
+
   }
 
   const handleClose = () => {
     setOpen(false)
   }
   const handleClickVeggie = (rand: number) => {
-    let randomVeg = ["potato", "onion", "lettuce", "tomato"]
-    setVeggie(randomVeg[rand])
-    console.log(randomVeg[rand])
+    let veg = ["potato", "onion", "lettuce", "tomato", "death"]
+    setVeggie(veg[rand])
+    console.log(veg[rand])
   }
 
   return (
     <div>
       <Button onClick={fetchData}>Hello World</Button>
-      <Typography>{JSON.stringify(data)}</Typography>
+
       <h1>Pick a random number to get a Veggie</h1>
       <Button onClick={() => handleClickVeggie(0)}>Veggie 1</Button>
       <Button onClick={() => handleClickVeggie(1)}>Veggie 2</Button>
       <Button onClick={() => handleClickVeggie(2)}>Veggie 3</Button>
       <Button onClick={() => handleClickVeggie(3)}>Veggie 4</Button>
+      <Button onClick={() => handleClickVeggie(4)}>DON'T CLICK THIS BUTTON UNLESS YOU WANT THE WORLD TO END</Button>
       <Typography>{veggie}</Typography>
       <Counter>
         {(count, setCount) =>
           <div>
             {count}
             <button onClick={() => setCount(count + 1)}>+</button>
+            <button onClick={() => setCount(count - 1)}>-</button>
 
           </div>}
       </Counter>
