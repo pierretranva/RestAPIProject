@@ -4,7 +4,7 @@
 // Proprietary and confidential.
 import React, { useEffect, useState } from "react";
 import type { FC } from 'react';
-import { Button, Dialog, Typography, DialogTitle, DialogContent } from '@material-ui/core';
+import { Button, Dialog, Typography, TextField, Skeleton, HomeIcon } from '@material-ui/core';
 import { Counter } from "./Counter"
 import { ShoppingCart } from "./ShoppingCart"
 
@@ -26,6 +26,7 @@ const App: FC = () => {
     let veg = ["potato", "onion", "lettuce", "tomato", "death"]
     setVeggie(veg[rand])
     console.log(veg[rand])
+
   }
 
   return (
@@ -48,6 +49,20 @@ const App: FC = () => {
 
           </div>}
       </Counter>
+      <Skeleton variant="text" />
+      <Skeleton variant="circular" width={40} height={40} />
+      <Skeleton variant="rectangular" width={210} height={118} />
+      <ShoppingCart>
+        {(cart, modifyCart) =>
+          <div>
+            <TextField size="small" />
+            {cart.name}{cart.count}{modifyCart}
+
+            <button onClick={() => modifyCart({ name: cart.name, count: cart.count + 1 })}>+</button>
+            <button onClick={() => modifyCart({ name: cart.name, count: cart.count - 1 })}>-</button>
+          </div>
+        }
+      </ShoppingCart>
 
     </div>
 

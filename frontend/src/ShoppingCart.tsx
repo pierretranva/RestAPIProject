@@ -1,19 +1,28 @@
 import React, { useState } from "react";
 
 interface Props {
-    veggie: (
-        cart: string,
-        setVeggie: React.Dispatch<React.SetStateAction<string>>,
-        count: number,
-        setCount: React.Dispatch<React.SetStateAction<number>>,
+    children: (
+        cart: typeof item,
+        modifyCart: React.Dispatch<React.SetStateAction<{
+            name: string;
+            count: number;
+        }>>,
     ) => JSX.Element | null
 }
+var item = {
+    name: "",
+    count: 0
+};
 
 
 
-export const ShoppingCart: React.FC<Props> = ({ veggie }) => {
-    const [cart, modifyCart] = useState<list>("");
-    const [count, setCount] = useState<number>(0);
+export const ShoppingCart: React.FC<Props> = ({ children }) => {
+    const [cart, modifyCart] = useState({ name: "", count: 0 });
 
-    return <div>{veggie(name, setVeggie, count, setCount)}</div>;
+    return (<div>
+        {
+        children(cart, modifyCart)
+        }
+        </div>;)
+
 };
