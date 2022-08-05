@@ -7,6 +7,7 @@ import type { FC } from 'react';
 import { Button, Dialog, Typography, TextField, Skeleton } from '@material-ui/core';
 import { Counter } from "./Counter"
 import { ShoppingCart } from "./ShoppingCart"
+import Navbar from "./Navbar"
 
 const App: FC = () => {
   const [data, setData] = useState<string>()
@@ -22,7 +23,9 @@ const App: FC = () => {
     setOpen(false)
   }
   return (
+
     <div>
+      <Navbar />
       <Counter>
         {(count, setCount) =>
           <div>
@@ -34,8 +37,6 @@ const App: FC = () => {
       </Counter>
 
       <ShoppingCart />
-
-
     </div>
 
   );
