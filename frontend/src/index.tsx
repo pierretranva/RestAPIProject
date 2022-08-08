@@ -15,6 +15,7 @@ import AdapterDateFns from '@material-ui/lab/AdapterDateFns';
 import StyledEngineProvider from '@material-ui/core/StyledEngineProvider';
 import App from './App';
 import React from 'react';
+import './index.css';
 
 ReactDOM.render(
   <StrictMode>
