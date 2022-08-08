@@ -1,0 +1,23 @@
+.App .gradient__bg {
+    background: rgb(193, 200, 229);
+    background: -moz-linear-gradient(66deg, rgba(193, 200, 229, 1) 0%, rgba(201, 223, 244, 1) 83%, rgba(177, 227, 247, 1) 97%, rgba(177, 162, 203, 1) 100%);
+    background: -webkit-linear-gradient(66deg, rgba(193, 200, 229, 1) 0%, rgba(201, 223, 244, 1) 83%, rgba(177, 227, 247, 1) 97%, rgba(177, 162, 203, 1) 100%);
+    background: linear-gradient(66deg, rgba(193, 200, 229, 1) 0%, rgba(201, 223, 244, 1) 83%, rgba(177, 227, 247, 1) 97%, rgba(177, 162, 203, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c1c8e5", endColorstr="#b1a2cb", GradientType=1);
+}
+
+
+.gradient__text {
+    background: var(--gradient-text);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section__padding {
+    padding: 4rem 6rem;
+}
+
+.section__margin {
+    margin: 4rem 6rem;
+}

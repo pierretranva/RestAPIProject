@@ -8,12 +8,14 @@
   "dependencies": {
     "@auth0/auth0-spa-js": "^1.13.6",
     "@emotion/cache": "^11.4.0",
-    "@emotion/react": "^11.4.0",
-    "@emotion/styled": "^11.3.0",
+    "@emotion/react": "^11.10.0",
+    "@emotion/styled": "^11.10.0",
     "@material-ui/core": "5.0.0-alpha.34",
     "@material-ui/icons": "5.0.0-alpha.34",
     "@material-ui/lab": "5.0.0-alpha.34",
     "@material-ui/system": "5.0.0-alpha.34",
+    "@mui/icons-material": "^5.8.4",
+    "@mui/material": "^5.9.3",
     "@types/jsonapi-serializer": "^3.6.5",
     "@types/react": "^17.0.1",
     "@types/react-dom": "^17.0.0",
@@ -42,7 +44,6 @@
     "stylis-plugin-rtl": "^2.1.0",
     "typescript": "^4.2.4"
   },
-  "devDependencies": {},
   "browserslist": {
     "production": [
       ">0.2%",

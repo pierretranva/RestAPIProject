@@ -5,9 +5,8 @@
 import React, { useEffect, useState } from "react";
 import type { FC } from 'react';
 import { Button, Dialog, Typography, TextField, Skeleton } from '@material-ui/core';
-import { Counter } from "./Counter"
-import { ShoppingCart } from "./ShoppingCart"
-import Navbar from "./Navbar"
+import { Navbar, ShoppingCart, Counter } from './components'
+import './App.css'
 
 const App: FC = () => {
   const [data, setData] = useState<string>()
@@ -24,20 +23,23 @@ const App: FC = () => {
   }
   return (
 
-    <div>
-      <Navbar />
-      <Counter>
-        {(count, setCount) =>
-          <div>
-            {count}
-            <button onClick={() => setCount(count + 1)}>+</button>
-            <button onClick={() => setCount(count - 1)}>-</button>
 
-          </div>}
-      </Counter>
+    <div className="App">
+      <div className="gradient__bg">
+        <Navbar />
 
-      <ShoppingCart />
-    </div>
+        <Counter>
+          {(count, setCount) =>
+            <div>
+              {count}
+              <button onClick={() => setCount(count + 1)}>+</button>
+              <button onClick={() => setCount(count - 1)}>-</button>
+
+            </div>}
+        </Counter>
+        <ShoppingCart />
+      </div>
+    </div >
 
   );
 };
