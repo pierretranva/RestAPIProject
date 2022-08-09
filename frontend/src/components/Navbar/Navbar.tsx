@@ -3,9 +3,6 @@ import { Button } from '@material-ui/core';
 import { Home, LocalMovies, Work } from '@material-ui/icons'
 import icon_128 from "../../assets/icon_128.png"
 import './Navbar.css'
-function handleClick() {
-    console.info('You clicked a breadcrumb.');
-}
 
 const Navbar = () => {
 

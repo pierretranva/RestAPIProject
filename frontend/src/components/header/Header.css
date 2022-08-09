@@ -1,0 +1,45 @@
+.header_main {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10rem 10rem;
+}
+
+.header__main-name {
+    transform: translate(10%, 200%)
+}
+
+
+.header__main-globe {
+    transform: translate(25%, -25%)
+}
+
+.header__main-links {
+    flex: 1;
+    display: flex;
+    justify-content: left;
+    transform: translate(10%, 800%)
+}
+
+.header__main-links_linkedin {
+    padding-right: 1rem;
+
+}
+
+.header__main-links_instagram {
+    padding-right: 1rem;
+
+}
+
+.header__main-links_github {
+    padding-right: 1rem;
+
+}
+
+.header__main-links Link {
+    padding: 2rem;
+    cursor: pointer;
+
+}
