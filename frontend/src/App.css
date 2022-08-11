@@ -1,11 +1,10 @@
 .App .gradient__bg {
-    background: rgb(193, 200, 229);
-    background: -moz-linear-gradient(66deg, rgba(193, 200, 229, 1) 0%, rgba(201, 223, 244, 1) 83%, rgba(177, 227, 247, 1) 97%, rgba(177, 162, 203, 1) 100%);
-    background: -webkit-linear-gradient(66deg, rgba(193, 200, 229, 1) 0%, rgba(201, 223, 244, 1) 83%, rgba(177, 227, 247, 1) 97%, rgba(177, 162, 203, 1) 100%);
-    background: linear-gradient(66deg, rgba(193, 200, 229, 1) 0%, rgba(201, 223, 244, 1) 83%, rgba(177, 227, 247, 1) 97%, rgba(177, 162, 203, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c1c8e5", endColorstr="#b1a2cb", GradientType=1);
+    background: rgb(201, 223, 244);
+    background: -moz-radial-gradient(circle, rgba(201, 223, 244, 1) 0%, rgba(188, 227, 242, 1) 21%, rgba(194, 203, 231, 1) 73%, rgba(198, 183, 223, 1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(201, 223, 244, 1) 0%, rgba(188, 227, 242, 1) 21%, rgba(194, 203, 231, 1) 73%, rgba(198, 183, 223, 1) 100%);
+    background: radial-gradient(circle, rgba(201, 223, 244, 1) 0%, rgba(188, 227, 242, 1) 21%, rgba(194, 203, 231, 1) 73%, rgba(198, 183, 223, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c9dff4", endColorstr="#c6b7df", GradientType=1);
 }
-
 
 .gradient__text {
     background: var(--gradient-text);
