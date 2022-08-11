@@ -4,16 +4,45 @@ import { LinkedIn, Instagram, GitHub } from '@material-ui/icons'
 import Globe from 'react-globe.gl'
 import './Header.css'
 import countries from './hexData.json'
+import blueGlobe from '../../assets/blueGlobe.jpeg'
+import darkGlobe from '../../assets/darkGlobe.jpeg'
+import * as THREE from 'three'
 
 
-const thing: Array<Number> = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-const arcsData = [thing].map(() => ({
+
+const globeMaterial = new THREE.MeshPhongMaterial();
+globeMaterial.color = new THREE.Color(0x4050b5);
+globeMaterial.emissive = new THREE.Color(0x0000ff);
+globeMaterial.emissiveIntensity = 0.2;
+globeMaterial.shininess = 5;
+globeMaterial.specular = new THREE.Color(0xc6b7df);
+globeMaterial.wireframe = false;
+
+// controls.enableDamping = true;
+// controls.dynamicDampingFactor = 0.01;
+// controls.enablePan = false;
+// controls.minDistance = 200;
+// controls.maxDistance = 500;
+// controls.rotateSpeed = 0.8;
+// controls.zoomSpeed = 1;
+// controls.autoRotate = false;
+
+// controls.minPolarAngle = Math.PI / 3.5;
+// controls.maxPolarAngle = Math.PI - Math.PI / 3;
+
+
+
+
+const N = 10;
+const arcsData = Array.from(Array(N).keys()).map((_, index) => ({
     startLat: (Math.random() - 0.5) * 180,
     startLng: (Math.random() - 0.5) * 360,
     endLat: (Math.random() - 0.5) * 180,
     endLng: (Math.random() - 0.5) * 360,
-    color: [['red', 'white', 'blue', 'green'][Math.round(Math.random() * 3)], ['red', 'white', 'blue', 'green'][Math.round(Math.random() * 3)]]
+    name: 'hello!',
+
 }));
+
 const Header = () => {
 
     return (
@@ -32,19 +61,36 @@ const Header = () => {
             </div>
             <div className="header__main-globe">
                 <Globe
-                    globeImageUrl="//unpkg.com/three-globe/example/img/earth-dark.jpg"
+                    enablePointerInteraction={false}
+                    globeMaterial={globeMaterial}
+                    // globeImageUrl={darkGlobe}
                     backgroundColor="rgba(0,0,0,0)"
-                    animateIn={false}
-                    atmosphereColor="#c6b7df"
+
+
                     hexPolygonsData={countries.features}
                     hexPolygonResolution={3}
+                    hexTopCurvatureResolution={100}
+                    hexPolygonColor={() => "rgba(255,255,255,.7)"}
+                    hexPolygonMargin={.6}
+                    atmosphereColor="#c6b7df"
                     showAtmosphere={true}
                     atmosphereAltitude={.25}
+
+
+
+
                     arcsData={arcsData}
-                    arcColor={'color'}
+                    arcColor={() => 'rgba(255,105,180,0.8)'}
+                    arcAltitudeAutoScale={.4}
+                    arcStroke={.6}
                     arcDashLength={.9}
-                    arcDashGap={() => Math.random()}
-                    arcDashAnimateTime={() => Math.random() * 4000 + 500} />
+                    arcDashGap={4}
+                    arcDashAnimateTime={() => 6000}
+                    arcsTransitionDuration={2000}
+
+                />
+
+
 
             </div>
         </div>

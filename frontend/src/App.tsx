@@ -5,7 +5,7 @@
 import React, { useEffect, useState } from "react";
 import type { FC } from 'react';
 import { Button, Dialog, Typography, TextField, Skeleton } from '@material-ui/core';
-import { Navbar, ShoppingCart, Counter, Header } from './components'
+import { Navbar, ShoppingCart, Counter, Header, About } from './components'
 import './App.css'
 
 const App: FC = () => {
@@ -28,6 +28,7 @@ const App: FC = () => {
       <div className="gradient__bg">
         <Navbar />
         <Header />
+        <About />
 
         <Counter>
           {(count, setCount) =>
