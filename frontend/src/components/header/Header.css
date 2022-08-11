@@ -1,26 +1,41 @@
-.header_main {
+.header__main {
 
     display: flex;
-    justify-content: space-between;
     align-items: center;
-
-    padding: 10rem 10rem;
+    height: 690px;
+    transform: translateX(-14%);
 }
 
 .header__main-name {
-    transform: translate(10%, 200%)
+    align-items: left;
+    transform: translate(100%, -50%);
+
+
+}
+
+.header__main-name_sub {
+
+    color: #f900c7;
+
+}
+
+.header__main-name h1 {
+
+    color: #25449f;
+
 }
 
 
+
 .header__main-globe {
-    transform: translate(25%, -25%)
+    transform: translate(0%, -5%)
 }
 
 .header__main-links {
     flex: 1;
     display: flex;
     justify-content: left;
-    transform: translate(10%, 800%)
+
 }
 
 .header__main-links_linkedin {
@@ -39,7 +54,7 @@
 }
 
 .header__main-links Link {
-    padding: 2rem;
+
     cursor: pointer;
 
 }

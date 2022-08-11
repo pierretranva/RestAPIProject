@@ -48,9 +48,9 @@ const Header = () => {
     return (
         <div className="header__main">
             <div className="header__main-name">
-                <Typography align="left" variant="body1">Hi, my name is</Typography>
-                <Typography align="left" variant="h2">Pierre Tran.</Typography>
-                <Typography align="left" variant="h2">Computer Science Student at Virginia Tech</Typography>
+                <Typography className="header__main-name_sub" align="left" variant="subtitle1">Hi, my name is </Typography>
+                <Typography align="left" noWrap={true} variant="h1">Pierre Tran.</Typography>
+
             </div>
             <div className="header__main-links">
 
@@ -89,9 +89,6 @@ const Header = () => {
                     arcsTransitionDuration={2000}
 
                 />
-
-
-
             </div>
         </div>
     )
