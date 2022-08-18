@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button } from '@material-ui/core';
+import { Button, Typography } from '@material-ui/core';
 import { Home, LocalMovies, Work } from '@material-ui/icons'
 import icon_128 from "../../assets/icon_128.png"
 import './Navbar.css'
@@ -13,14 +13,14 @@ const Navbar = () => {
                     <img src={icon_128} />
                 </div>
                 <div className="navbar__main-links_container">
-                    <p><a href="#home">Work</a></p>
-                    <p><a href="#home">Education</a></p>
-                    <p><a href="#home">Projects</a></p>
-                    <p><a href="#home">Skills</a></p>
+                    <p><a href="#home"><Typography variant="h6">Home</Typography></a></p>
+                    <p><a href="#home"><Typography variant="h6">About Me</Typography></a></p>
+                    <p><a href="#home"><Typography variant="h6">Projects</Typography></a></p>
+                    <p><a href="#home"><Typography variant="h6">Contact Me</Typography></a></p>
                 </div>
             </div>
             <div className="navbar__main-sign">
-                <Button variant="contained">Contact</Button>
+                <Button variant="contained">Resume</Button>
             </div>
             <div className="navbar__main-menu">
             </div>
