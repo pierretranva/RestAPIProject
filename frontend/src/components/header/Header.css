@@ -1,6 +1,7 @@
 .header__main {
 
     display: flex;
+    flex-direction: row;
     align-items: center;
     height: 800px;
     transform: translateX(-14%);
@@ -28,7 +29,9 @@
 
 
 .header__main-globe {
-    transform: translate(0%, -5%);
+    /* transform: translate(50%, -200%); */
+    /* max-width: 200px;
+    max-height: 200px; */
 }
 
 .header__main-links {
